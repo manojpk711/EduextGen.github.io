@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket event countdown</title>
+    <link rel="stylesheet" type="text/css" href="style_countdown.css">
+</head>
+<body>
+<table  class="count">
+    <tr class="info">
+        <td colspan="4">WORLD CUP COUNTDOWN</td>
+    </tr>
+    <tr class="info">
+        <td id="days"></td>
+        <td id="hours"></td>
+        <td id="minutes"></td>
+        <td id="seconds"></td>
+    </tr>
+    <tr>
+        <td>Days</td>
+        <td>Hours</td>
+        <td>Minutes</td>
+        <td>Seconds</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    function countdown(){
+        var now=new Date();
+        // var eventDate=new Date(year,month,date,h,m,s,ms);
+        var eventDate=new Date(2019,10,20);
+
+        var currentTime=now.getTime();
+        var eventTime=eventDate.getTime();
+
+        var remTime=eventTime-currentTime; 
+
+        var s=Math.floor(remTime / 1000);
+        var m=Math.floor(s / 60);
+        var h=Math.floor(m / 60);
+        var d=Math.floor(h / 24); 
+
+        h%=24;
+        m%=60; 
+        s%=60
+        h=(h < 10) ? "0" + h:h;
+         m=(m < 10) ? "0" + m:m;
+          s=(s < 10) ? "0" + s:s;
+document.getElementById("days").texContent=d;
+document.getElementById("days").innerHTML=d;
+
+document.getElementById("hours").innerHTML=h; 
+document.getElementById("minutes").innerHTML=m;
+document.getElementById("seconds").innerHTML=s;
+
+setTimeout(countdown,1000);
+   }
+ countdown();
+</script>
+
+</body>
+</html>

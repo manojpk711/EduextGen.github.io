@@ -1,0 +1,77 @@
+/*@import url{'https://fonts.googleapis.com/css?family=Poppins:300,400f'}*/
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family:sans-serif;
+}
+body{
+display: flex;
+justify-content:center;
+align-items: center;
+min-height: 100vh;
+background:#1ce37c;
+
+}
+ul{
+	position:absolute;
+	background:#fff;
+	display: flex;
+	padding:10px 20px;
+	border-radius: 50px;
+	box-shadow:0 5px 15px rgba(0,0,0,.2);
+}            
+ul li{
+	list-style: none;
+	line-height: 50px;
+	margin: 0 5px;                           
+}
+ul li.pageNumber{
+	width:50px;
+	height: 50px;
+	line-height:50px;
+	text-align: center;
+}
+ul li a{
+	display: block;
+	text-orientation:none;
+	color: #777;
+	font-weight: 600;
+	border-radius: 50%;
+}
+ul li.pageNumber:hover a,
+ul li.pageNumber.active a
+{
+	background:#333;
+	color: #fff;
+}
+ul li:first-child{
+	margin-right:30px;
+	font-weight:700;
+	font-size:20px;
+}
+ul li:last-child{
+	margin-right:30px;
+	font-weight:700;
+	font-size:20px;
+}
+.pagination{
+	margin-top:20%;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
